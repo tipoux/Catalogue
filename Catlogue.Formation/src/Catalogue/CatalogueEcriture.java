@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -92,9 +93,10 @@ public class CatalogueEcriture extends JFrame
         				
 	        			dispose();
 	        			
+	        			ImageIcon img = new ImageIcon("images/720.jpg");
 	        			JOptionPane jop1;  
 	        			jop1 = new JOptionPane();
-	        			jop1.showMessageDialog(null, "Votre formation a bien été ajouté", "Information", JOptionPane.INFORMATION_MESSAGE);
+	        			jop1.showMessageDialog(null, "Votre formation a bien été ajouté", "Information", JOptionPane.INFORMATION_MESSAGE, img);
 	        			
 	        			CatalogueLecture a = new CatalogueLecture();
 	        			a.Lecture();

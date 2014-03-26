@@ -76,7 +76,7 @@ public class CatalogueSupp extends JFrame
 	  	    	  		
 		  	    	  	dispose();
 	        			
-		  	    	  	ImageIcon img = new ImageIcon("images/logo.png");
+		  	    	  	ImageIcon img = new ImageIcon("images/720.jpg");
 	        			JOptionPane jop1;  
 	        			jop1 = new JOptionPane();
 	        			jop1.showMessageDialog(null, "Votre formation a bien été supprimée", "Information", JOptionPane.INFORMATION_MESSAGE,img);

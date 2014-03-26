@@ -68,8 +68,8 @@ public class CatalogueLecture extends JFrame
     	      {
     	    	  public void actionPerformed(ActionEvent e)
     	          {
-    	    		  CatalogueEcriture aa = new CatalogueEcriture();
-    	              aa.FenetreEcriture();
+    	    		  CatalogueConnexion aa = new CatalogueConnexion();
+    	              aa.Connexion();
     	              dispose();
     	           } 
     	       }

@@ -73,12 +73,18 @@ public class CatalogueConnexion extends JFrame
             			Connection c = DriverManager.getConnection(url, user, password);
             			Statement s = c.createStatement();
             			
-            			String req = "SELECT count(*) FROM user WHERE user_pseudo = '" + pseudo.getText() + "' AND user_mdp = '" + mdp.getText() + "' ";
+            			String req = "SELECT * FROM user WHERE user_pseudo = '" + pseudo.getText() + "' AND user_mdp = '" + mdp.getText() + "' ";
             			ResultSet rs = s.executeQuery(req);
+            			rs.last();
+            			
+            			int nbligne = rs.getRow();
+            			
+            			rs.beforeFirst();
+            			
+            			System.out.println(nbligne);
 
-            			if(rs.next())
+            			if(nbligne == 1)
             			{
-            				System.out.println(rs.next());
 	            			dispose();
 		        			
 		        			CatalogueEcriture a = new CatalogueEcriture();
@@ -86,8 +92,7 @@ public class CatalogueConnexion extends JFrame
             			}
             			
             			else 
-            			{	
-            				System.out.println(rs.next());
+            			{
             				JOptionPane jop1;  
     	        			jop1 = new JOptionPane();
     	        			jop1.showMessageDialog(null, "Pseudo et/ou Mot de passe incorrect.", "Information", JOptionPane.INFORMATION_MESSAGE);
