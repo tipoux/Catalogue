@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
-public class CatalogueConnexion extends JFrame
+public class CatalogueConnexionSupp extends JFrame
 {
 	private JPanel fenetre = new JPanel();
 	
@@ -28,7 +28,7 @@ public class CatalogueConnexion extends JFrame
 	private JButton connexion = new JButton("Connexion");
 	private JButton retour = new JButton("retour");
 	
-	public void Connexion()
+	public void ConnexionSupp()
 	{
 		this.setTitle("Connexion");
 		this.setSize(300, 300);
@@ -80,15 +80,13 @@ public class CatalogueConnexion extends JFrame
             			int nbligne = rs.getRow();
             			
             			rs.beforeFirst();
-            			
-            			System.out.println(nbligne);
 
             			if(nbligne == 1)
             			{
 	            			dispose();
 		        			
-		        			CatalogueEcriture a = new CatalogueEcriture();
-		                    a.FenetreEcriture();
+		        			CatalogueSupp a = new CatalogueSupp();
+		                    a.Suppression();
             			}
             			
             			else 
@@ -118,6 +116,9 @@ public class CatalogueConnexion extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 dispose();
+                
+                CatalogueLecture a = new CatalogueLecture();
+                a.Lecture();
             }
             
         }

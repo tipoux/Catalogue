@@ -22,7 +22,7 @@ public class CatalogueSupp extends JFrame
 {
 	private JPanel fenetresupp = new JPanel();
 	
-	private JLabel libcombo = new JLabel("ma combo");
+	@SuppressWarnings("rawtypes")
 	private JComboBox combo = new JComboBox();
 	private JButton supp = new JButton ("Supprimer");
 	private JButton retour = new JButton ("Retour");
@@ -35,13 +35,11 @@ public class CatalogueSupp extends JFrame
 		this.setLocationRelativeTo(null);
 		fenetresupp.setBackground(Color.white);
 		fenetresupp.setLayout(null);
-		
-		libcombo.setBounds(20, 5, 100, 30);
+
 		combo.setBounds(100, 10, 100, 20);
 		supp.setBounds(100, 50, 100, 20);
 		retour.setBounds(100, 90, 100, 20);
-		
-		fenetresupp.add(libcombo);
+
 		fenetresupp.add(combo);
 		fenetresupp.add(supp);
 		fenetresupp.add(retour);
@@ -79,7 +77,7 @@ public class CatalogueSupp extends JFrame
 		  	    	  	ImageIcon img = new ImageIcon("images/720.jpg");
 	        			JOptionPane jop1;  
 	        			jop1 = new JOptionPane();
-	        			jop1.showMessageDialog(null, "Votre formation a bien été supprimée", "Information", JOptionPane.INFORMATION_MESSAGE,img);
+	        			jop1.showMessageDialog(null, "Votre formation a bien été supprimée", "Information", JOptionPane.INFORMATION_MESSAGE, img);
 	        			
 	        			CatalogueLecture a = new CatalogueLecture();
 	        			a.Lecture();

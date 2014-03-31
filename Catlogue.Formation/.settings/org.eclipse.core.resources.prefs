@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
-encoding//src/Catalogue/CatalogueConnexion.java=UTF-8
+encoding//src/Catalogue/CatalogueConnexionAjout.java=UTF-8
+encoding//src/Catalogue/CatalogueConnexionSupp.java=UTF-8
 encoding//src/Catalogue/CatalogueEcriture.java=UTF-8
 encoding//src/Catalogue/CatalogueLecture.java=UTF-8
 encoding//src/Catalogue/CatalogueSupp.java=UTF-8

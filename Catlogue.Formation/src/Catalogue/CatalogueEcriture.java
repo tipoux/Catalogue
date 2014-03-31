@@ -86,9 +86,9 @@ public class CatalogueEcriture extends JFrame
         				Class.forName("com.mysql.jdbc.Driver");
             			String url = "jdbc:mysql://localhost:8889/catalogue", user = "root", password = "root";
             			Connection c = DriverManager.getConnection(url, user, password);
-            			Statement s = c.createStatement();
             			String req = "INSERT INTO formation (formation_libelle, formation_description, formation_prix) "
             					+ "VALUES ('" + libelle.getText() + "', '" + description.getText() + "', '" + prix.getText() + "')";
+            			Statement s = c.createStatement();
             			s.executeUpdate(req);
         				
 	        			dispose();

@@ -68,7 +68,7 @@ public class CatalogueLecture extends JFrame
     	      {
     	    	  public void actionPerformed(ActionEvent e)
     	          {
-    	    		  CatalogueConnexion aa = new CatalogueConnexion();
+    	    		  CatalogueConnexionAjout aa = new CatalogueConnexionAjout();
     	              aa.Connexion();
     	              dispose();
     	           } 
@@ -79,8 +79,8 @@ public class CatalogueLecture extends JFrame
     	      {
     	    	  public void actionPerformed(ActionEvent e)
     	          {
-    	    		  CatalogueSupp aa = new CatalogueSupp();
-    	              aa.Suppression();
+    	    		  CatalogueConnexionSupp aa = new CatalogueConnexionSupp();
+    	              aa.ConnexionSupp();
     	              dispose();
     	           } 
     	       }
@@ -92,7 +92,7 @@ public class CatalogueLecture extends JFrame
 		
     	catch (ClassNotFoundException | SQLException e)
     	{
-    		e.printStackTrace();
+    		System.out.println("Impossible de se connecter à la base de donnée.");
     	}
     }
 }
