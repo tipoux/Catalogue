@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
@@ -21,7 +22,7 @@ public class CatalogueConnexionAjout extends JFrame
 	private JPanel fenetre = new JPanel();
 	
 	private JTextField pseudo = new JTextField("");
-	private JTextField mdp = new JTextField("");
+	private JPasswordField mdp = new JPasswordField("");
 	private JLabel labelpseudo = new JLabel("Pseudo");
 	private JLabel labelmdp = new JLabel("Mot de passe");
 	private JLabel permission = new JLabel("Veuillez vous connecter :");
